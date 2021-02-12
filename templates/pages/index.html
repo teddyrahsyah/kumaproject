@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <section class="hero">
+            <div class="title">
+                <h1>yang kamu butuhkan ketika lapar</h1>
+                <h3>#GoodFoodGoodMood</h3>
+            </div>
+            <div class="hero_img">
+                <img src="{% static 'homepage/img/hero_home_img.png' %}" alt="">
+                <div class="hero_mobile"></div>
+            </div>
+        </section>
+    
+        <section class="video">
+            <div class="video-cover">
+                <div class="hiya"></div>
+                <h3>Video Kuma</h3>
+            </div>
+        </section>
+        <section class="why-us">
+            <h3>kenapa memilih kuma?</h3>
+            <div class="why-us-box">
+                <div class="why-us-img"></div>
+                <div class="why-us-txt">
+                    <p>Kuma adalah sebuah platform dimana kamu dapat memesan makanan dan juga menjual makanan</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="benefit">
+            <h3>Keuntungan menggunakan kuma</h3>
+            <div class="benefit-cards">
+                <div class="card">
+                    <div class="card-inside">
+                        <img src="{% static 'homepage/img/icon-price.png' %}" alt="">
+                        <p>harga terjangkau</p>
+                    </div>
+                    <div class="hover">
+                        <p>Temukan makanan favoritmu dengan harga receh !</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inside">
+                        <img src="{% static 'homepage/img/icon-quality.png' %}" alt="">
+                        <p>Makanan Berkualitas</p>
+                    </div>
+                    <div class="hover">
+                        <p>Tak perlu khawatir kualitas makanan & minuman terjamin karena 100% buatan rumah.!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inside">
+                        <img src="{% static 'homepage/img/icon-preorder.png' %}" alt="">
+                        <p>Pre-Order</p>
+                    </div>
+                    <div class="hover">
+                        <p>Menu spesial untuk Hari Spesialmu! Kuma akan membuatkan menu spesial dan mengantarkannya tepat di
+                            hari spesialmu.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inside button">
+                        <img src="{% static 'homepage/img/icon-asisten-bearma.png' %}" alt="">
+                        <a href="">Gabung Sebagai Produsen</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inside">
+                        <img src="{% static 'homepage/img/icon-asisten-bearma.png' %}" alt="">
+                        <p>Asisten Bearma</p>
+                    </div>
+                    <div class="hover">
+                        <p>Jangan takut lupa untuk jadwal makan harianmu dan bingung mendapatkan makanan dimana, kini
+                            Asisten Bearma hadir untuk memenuhi kebutuhanmu!</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-inside button">
+                        <img src="{% static 'homepage/img/icon-asisten-bearma.png' %}" alt="">
+                        <a href="">Gabung Sebagai Supplier</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="coming-soon">
+            <div class="coming-soon-cover">
+                <div class="phone">
+                    <img src="{% static 'homepage/img/phone.png' %}" alt="">
+                </div>
+                <div class="coming-soon-txt">
+                    <h3>segera hadir!</h3>
+                    <p>Tunggu kami dalam genggamanmu. Aplikasi kami sedang tahap pengembangan</p>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock content %}
+    
