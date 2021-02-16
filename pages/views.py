@@ -5,6 +5,7 @@ from .models import HomepageImage, ServicepageImage, AboutpageImage, JoinpageIma
 # Create your views here.
 def homepage(request):
     context = {
+        'title_tag': '| Beranda',
         'benefits': HomepageImage.objects.all()[:4],
         'mobileapp': HomepageImage.objects.last()
     }
@@ -13,12 +14,14 @@ def homepage(request):
 def servicepage(request):
     consumer_data = ServicepageImage.objects.all()
     context = {
+        'title_tag': '| Layanan',
         'consumers': consumer_data
     }
     return render(request, 'pages/service.html', context)
 
 def aboutpage(request):
     context = {
+        'title_tag': '| Tentang Kami',
         'first': AboutpageImage.objects.first(),
         'creators': AboutpageImage.objects.all(),
         'last': AboutpageImage.objects.get(id=2)
@@ -29,6 +32,7 @@ def aboutpage(request):
 content = JoinpageImage.objects.all()
 def join_produsen(request):
     context = {
+        'title_tag': '| Join Produsen',
         'join': content[0],
         'sell': content[1],
         'finance': content[2],
@@ -39,6 +43,7 @@ def join_produsen(request):
 
 def join_supplier(request):
     context = {
+        'title_tag': '| Join Supplier',
         'join': content[3],
         'sell': content[4],
         'finance': content[5],
