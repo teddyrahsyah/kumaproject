@@ -5,19 +5,25 @@
     </div>
 
     <nav>
-        <a class="link" href="">beranda</a>
-        <a class="link" href="">layanan</a>
-        <a class="link" href="">Tentang kami</a>
-        <a class="link" href="">gabung sebagai supplier</a>
-        <a class="link" href="">gabung sebagai produsen</a>
+        <a class="link" href="{% url 'home-page' %}">beranda</a>
+        <a class="link" href="{% url 'service-page' %}">layanan</a>
+        <a class="link" href="{% url 'about-page' %}">Tentang kami</a>
+        <a class="link" href="{% url 'supplier-page' %}">gabung sebagai supplier</a>
+        <a class="link" href="{% url 'produsen-page' %}">gabung sebagai produsen</a>
     </nav>
 
     <div class="follow-us">
         <p>follow us on</p>
         <div class="socmed">
-            <img src="{% static 'base/img/icon-facebook.svg' %}" alt="facebook logo">
-            <img src="{% static 'base/img/icon-twitter.svg' %}" alt="facebook logo">
-            <img src="{% static 'base/img/icon-ig.svg' %}" alt="facebook logo">
+            <a href="https://web.facebook.com/profile.php?id=100061038025955">
+                <img src="{% static 'base/img/icon-facebook.svg' %}" alt="facebook logo">
+            </a>
+            <a href="https://twitter.com/MakanIngin">
+                <img src="{% static 'base/img/icon-twitter.svg' %}" alt="facebook logo">
+            </a>        
+            <a href="https://instagram.com/kuma_kuinginmakan?igshid=nl5b7909e2q9">
+                <img src="{% static 'base/img/icon-ig.svg' %}" alt="facebook logo">
+            </a>        
         </div>
     </div>
 </footer>

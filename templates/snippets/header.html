@@ -4,24 +4,24 @@
         <img src="{% static 'base/img/logo1.png' %}" alt="">
     </div>
     <nav>
-        <a class="link" href="">beranda</a>
-        <a class="link" href="./service/konsumen/promosi.html">layanan</a>
-        <a class="link" href="">Tentang kami</a>
+        <a class="link" href="{% url 'home-page' %}">beranda</a>
+        <a class="link" href="{% url 'service-page' %}">layanan</a>
+        <a class="link" href="{% url 'about-page' %}">Tentang kami</a>
         <div class="dropdown">
             <a class="link" href="">gabung</a>
             <div class="dropdown-content">
-                <a href="">Supplier</a>
-                <a href="">produsen</a>
+                <a href="{% url 'supplier-page' %}">Supplier</a>
+                <a href="{% url 'produsen-page' %}">produsen</a>
             </div>
         </div>
     </nav>
 
     <menu>
-        <a class="link" href="">beranda</a>
-        <a class="link" href="./service/konsumen/promosi.html">layanan</a>
-        <a class="link" href="">Tentang kami</a>
-        <a class="link" href="">gabung sebagai supplier</a>
-        <a class="link" href="">gabung sebagai produsen</a>
+        <a class="link" href="{% url 'home-page' %}">beranda</a>
+        <a class="link" href="{% url 'service-page' %}">layanan</a>
+        <a class="link" href="{% url 'about-page' %}">Tentang kami</a>
+        <a class="link" href="{% url 'supplier-page' %}">gabung sebagai supplier</a>
+        <a class="link" href="{% url 'produsen-page' %}">gabung sebagai produsen</a>
     </menu>
 
     <div class="burger">

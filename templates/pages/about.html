@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <section class="hero about">
+            <div class="title">
+                <h1>Tentang kami</h1>
+            </div>
+        </section>
+    
+        <div class="content">
+            <section class="goal">
+                <h3>tujuan kami</h3>
+                <img src="{% static 'about/img/about_goal.png' %}" alt="">
+                <p>Membantu meningkatkan ekonomi dan ekosistem Usaha Mikro Kecil dan Menengah di bidang Kuliner.</p>
+            </section>
+    
+            <section class="who-we-are">
+                <img src="{% static 'about/img/about_who.png' %}" alt="">
+                <div class="text-who">
+                    <h3>Siapa kita?</h3>
+                    <p>Berawal dari keresahan masyarakat terkait Pandemi Covid 19 yang tidak kunjung berakhir. Berbagai
+                        sektor usaha, salah satunya UMKM di bidang kuliner mengalami kerugian ekonomi. Untuk itu Kuma hadir
+                        sebagai salah satu wujud kepedulian kami. Dengan misi untuk membantu mereka agar dapat menumbuhkan
+                        ekonomi, kami menciptakan layanan untuk mempermudah proses jual beli sehingga dapat meningkatkan
+                        ekonomi di Indonesia.</p>
+                </div>
+            </section>
+    
+            <section class="contributors">
+                <div class="carousel-container">
+                    <i class="fas fa-arrow-left" id="prevBtn"></i>
+                    <i class="fas fa-arrow-right" id="nextBtn"></i>
+                    <div class="carousel-slider">                    
+                        {% for creator in creators %}                        
+                            {% if creator.content.id == 1 %}
+                                <div class="person" id="firstClone">
+                                    <img src="{{ creator.image.url }}" alt="">
+                                    <p>{{ creator.content.quotes }}</p>
+                                </div>                        
+                            {% else %}
+                                <div class="person">
+                                    <img src="{{ creator.image.url }}" alt="">
+                                    <p>{{ creator.content.quotes }}</p>
+                                </div>
+                            {% endif %}                                                                                               
+                        {% endfor %}
+                        <div class="person">
+                            <img src="{{ first.image.url }}" alt="">
+                            <p>{{ first.content.quotes }}</p>
+                        </div>
+                        <div class="person" id="lastClone">
+                            <img src="{{ last.image.url }}" alt="">
+                            <p>{{ last.content.quotes }}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock content %}
+    

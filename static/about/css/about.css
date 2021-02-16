@@ -1,0 +1,269 @@
+/* HERO SECTION BEGIN */
+
+.about {
+  background-image: url("/static/about/img/hero_about_img.png");
+  background-position: 70% 0;
+  background-repeat: no-repeat;
+}
+
+.goal,
+.who-we-are,
+.contributors,
+.ctrl-btn,
+.person,
+.contact-cover,
+.contact {
+  display: flex;
+}
+
+/* GOAL SECTION BEGIN */
+
+.goal {
+  flex-direction: column;
+  padding: 2em 0;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin: 2em 0;
+}
+
+.goal img {
+  width: 90%;
+}
+
+.goal p {
+  width: 45%;
+  text-align: center;
+}
+
+/* WHO WE ARE SECTION BEGIN */
+
+.who-we-are {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 2em 0;
+}
+
+.who-we-are img {
+  flex: 1;
+}
+
+.text-who {
+  flex: 1;
+  margin: 0 1.5em;
+}
+
+.text-who h3 {
+  position: relative;
+  padding-left: 1em;
+}
+
+.text-who h3::before {
+  content: "";
+  display: inline-block;
+  width: 0.3em;
+  height: 1.5em;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  background-color: var(--second-color);
+  margin: 0 5px;
+}
+
+.text-who p {
+  margin-top: 1.3em;
+  line-height: 1.5em;
+}
+
+/* CONTRIBUTORS SECTION BEGIN */
+
+.contributors {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  margin: 2em 0;
+  margin-bottom: 0;
+}
+
+.carousel-container {
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+  padding: 2em 0;
+  position: relative;
+  padding-bottom: 0;
+}
+
+.carousel-slider {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 450px;
+}
+
+.carousel-slider img {
+  width: 100%;
+}
+
+.person {
+  background-color: var(--third-color);
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50vh;
+  width: 100%;
+  padding: 2em;
+  border-radius: 1em;
+}
+
+.person img {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.person p {
+  padding: 0 4.5em;
+  text-align: center;
+  margin-top: 0.2em;
+}
+
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 35%;
+  z-index: 100;
+  left: 5%;
+  font-size: 1.5em;
+  color: var(--second-color);
+  cursor: pointer;
+}
+
+#nextBtn {
+  left: 90%;
+}
+
+.contact {
+  margin-top: -10em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-cover {
+  background-color: var(--third-color);
+  flex-direction: column;
+  border-radius: 1em;
+  padding: 2em;
+  text-align: center;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .who-we-are img {
+    width: 50%;
+  }
+  .who-we-are p {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .about {
+    background-size: cover;
+    background-position: 10% center;
+  }
+
+  .goal p {
+    width: 80%;
+  }
+
+  .who-we-are {
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+  }
+
+  .who-we-are img {
+    width: 80%;
+  }
+
+  .text-who h3 {
+    margin: 1em auto;
+    text-align: center;
+    width: 50%;
+  }
+
+  .person img {
+    margin-top: 1em;
+    width: 30%;
+  }
+
+  .person p {
+    text-align: center;
+    font-size: 0.9em;
+  }
+
+  .carousel-container {
+    /* overflow-x: scroll; */
+    height: 350px;
+    margin-bottom: 2em;
+  }
+
+  #prevBtn,
+  #nextBtn {
+    top: 55%;
+  }
+
+  .contact {
+    margin-top: -5em;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .text-who h3 {
+    width: 100%;
+  }
+
+  .goal img {
+    width: 100%;
+  }
+
+  .goal p {
+    width: 100%;
+  }
+
+  .goal img,
+  .goal p {
+    margin-top: -3em;
+  }
+
+  .who-we-are {
+    margin-top: -2em;
+  }
+
+  .who-we-are img {
+    width: 100%;
+  }
+
+  .who-we-are p {
+    text-align: justify;
+  }
+
+  .carousel-container {
+    width: 90%;
+  }
+
+  .person img {
+    width: 35%;
+  }
+
+  .person p {
+    font-size: 0.8em;
+    padding: 0.5em;
+  }
+}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <section class="hero hero_sp">
+            <div class="title_pr">
+                <h1>jadilah supplier</h1>
+                <h3>#GoodFoodGoodMood</h3>
+            </div>
+        </section>
+    
+        <div class="content">
+            <section class="bergabung">
+                <div class="bergabung-cover">
+                    <div class="text">
+                        <h3>{{ join.content.title }}</h3>
+                        <p>{{ join.content.description }}</p>
+                    </div>
+                    <img src="{{ join.image.url }}" alt="">
+                </div>
+            </section>
+            <section class="jual">
+                <div class="jual-cover">
+                    <div class="text">
+                        <h3>{{ sell.content.title }}</h3>
+                        <p>{{ sell.content.description }}</p>
+                    </div>
+                    <img src="{{ sell.image.url }}" alt="">
+                </div>
+            </section>
+            <section class="keuangan">
+                <div class="keuangan-cover">
+                    <div class="text">
+                        <h3>{{ finance.content.title }}</h3>
+                        <p>{{ finance.content.description }}</p>
+                    </div>
+                    <img src="{{ finance.image.url }}" alt="">
+                </div>
+            </section>
+        </div>
+        <section class="coming-soon">
+            <div class="coming-soon-cover">
+                <div class="phone">
+                    <img src="{{ mobileapp.image.url }}" alt="">
+                </div>
+                <div class="coming-soon-txt">
+                    <h3>{{ mobileapp.content.title }}</h3>
+                    <p>{{ mobileapp.content.description }}</p>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock content %}
+    

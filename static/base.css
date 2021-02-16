@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
 @import "homepage/css/homepage.css";
 @import "service/css/service.css";
+@import "join/css/join_produsen.css";
+@import "about/css/about.css";
+@import "base/css/keep-scrolling-anim.css";
 
 :root {
   --base-color: #f5ebdc;
@@ -45,6 +48,7 @@ header {
 .logo img {
   width: 20%;
   padding: 1em 0;
+  margin-top: 0.5em;
 }
 
 nav {
@@ -146,33 +150,17 @@ menu,
   justify-content: flex-end;
 }
 
-/* .hero_image {
-  background-color: blue;
-  width: 90%;
-  height: 100vh;
-  background-image: url("../img/hero_home_img.png");
-  background-size: 130%;
-  background-repeat: no-repeat;
-  background-position: top;
-} */
-
-/* .hero_img {
-  justify-content: flex-end;
-  position: relative;
-  width: 85%;
-} */
-
 .title {
-  color: var(--base-color);
+  color: var(--third-color);
   width: 90%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 5em;
 }
 
 .title h1 {
   font-size: 4em;
-  width: 90%;
+  width: 50%;
 }
 
 /* Footer section */
@@ -211,6 +199,10 @@ footer nav a {
 }
 
 .socmed img {
+  width: 100%;
+}
+
+.socmed a {
   width: 20%;
 }
 
@@ -218,7 +210,7 @@ footer nav a {
 
 section {
   height: 100vh;
-  min-width: 100vw;
+  width: 100vw;
 }
 
 h1,
@@ -233,11 +225,6 @@ a {
 @media screen and (max-width: 992px) {
   nav {
     width: 40em;
-  }
-
-  .hero_img img {
-    width: 100%;
-    transform: translateX(10%);
   }
 
   .title {
@@ -255,10 +242,6 @@ a {
 }
 
 @media screen and (max-width: 760px) {
-  body {
-    overflow-x: hidden;
-  }
-
   nav {
     display: none;
   }
@@ -266,22 +249,21 @@ a {
   menu {
     height: 100vh;
     background-color: var(--third-color);
-    position: absolute;
-    right: -10%;
+    position: fixed;
     top: 0%;
-    display: flex;
+    left: 0;
+    bottom: 0;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 100vw;
+    width: 110vw;
     transform: translateX(110%);
     transition: transform 0.5s ease-in-out;
-    /* z-index: 201; */
   }
   menu a {
     color: var(--second-color);
     text-decoration: none;
-    z-index: 101;
   }
 
   menu a:hover {
@@ -312,6 +294,10 @@ a {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.active {
+  display: flex;
 }
 
 /* scrollbar custom */
