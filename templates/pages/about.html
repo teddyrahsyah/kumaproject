@@ -38,21 +38,29 @@
                             {% if creator.content.id == 1 %}
                                 <div class="person" id="firstClone">
                                     <img src="{{ creator.image.url }}" alt="">
+                                    <h3>{{ creator.content.name }}</h3>
+                                    <h5>{{ creator.content.roles }}</h5>
                                     <p>{{ creator.content.quotes }}</p>
                                 </div>                        
                             {% else %}
                                 <div class="person">
                                     <img src="{{ creator.image.url }}" alt="">
+                                    <h3>{{ creator.content.name }}</h3>
+                                    <h5>{{ creator.content.roles }}</h5>
                                     <p>{{ creator.content.quotes }}</p>
                                 </div>
                             {% endif %}                                                                                               
                         {% endfor %}
                         <div class="person">
                             <img src="{{ first.image.url }}" alt="">
+                            <h3>{{ first.content.name }}</h3>
+                            <h5>{{ first.content.roles }}</h5>
                             <p>{{ first.content.quotes }}</p>
                         </div>
                         <div class="person" id="lastClone">
                             <img src="{{ last.image.url }}" alt="">
+                            <h3>{{ last.content.name }}</h3>
+                            <h5>{{ last.content.roles }}</h5>
                             <p>{{ last.content.quotes }}</p>
                         </div>
                     </div>

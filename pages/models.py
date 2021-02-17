@@ -29,6 +29,7 @@ class ServicepageImage(models.Model):
 
 class AboutpageContent(models.Model):
     name = models.CharField(max_length=150)
+    roles = models.CharField(max_length=150, default='Contributors')
     quotes = models.TextField()
 
     def __str__(self):
